@@ -121,7 +121,7 @@ form{
 
 .btn{
     background: linear-gradient(315.01deg, #ffb800,#ff710d);
-    color:#060404;
+    color:#070404;
     font-size: 18px;
     border-radius: 50px;
     margin: 10px 0;
@@ -129,10 +129,11 @@ form{
     height:40px;
     border: none;
     cursor:pointer;
+    padding: 11px;
 }
 
 
-@media (max-width:779px){
+/* @media (max-width:779px){
     .profile {
         width:100vw;
         height:100vh;
@@ -144,8 +145,8 @@ form{
     form{ 
         width:80%;
     }
-    form.form-group{
-        display: none;
+    .form-group input{
+        display:none;
     }
 }
 
@@ -153,4 +154,4 @@ form{
     form{
       width:90%;
     }
-  }
+  } */
