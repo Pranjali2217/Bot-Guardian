@@ -33,7 +33,7 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border:1px solid #ffb800;
+    border:1px solid  #ff710d;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 10px;
@@ -97,7 +97,7 @@ form{
 }
 
 .upload-button {
-    background-color:#ffb800;
+    background: linear-gradient(315.01deg, #ffb800,#ff710d);
     color:#070404;
     font-size: 18px;
     border-radius: 50px;
@@ -110,7 +110,9 @@ form{
 }
 
 .profile h2{
-    color: #ffb800;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+    color: #ff710d;
 }
 #user-info {
    
@@ -118,7 +120,7 @@ form{
 }
 
 .btn{
-    background-color:#ffb800;
+    background: linear-gradient(315.01deg, #ffb800,#ff710d);
     color:#060404;
     font-size: 18px;
     border-radius: 50px;

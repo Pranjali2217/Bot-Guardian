@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <script src="https://kit.fontawesome.com/e62ecdfa8a.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="profile.css" >
-    
-
-
-       
-    
-    
 </head>
 <body>
     
@@ -22,8 +15,6 @@
             <img id="avatar" src="/default_img.png" alt="Profile Picture" style="height: 100px; width: 100px;">
         </div>
         
-        
-
         <div class="profile-container">
             
             <form action="profile.html" method="get" id="profile-form" onsubmit="return validateForm()">
@@ -53,18 +44,13 @@
                 </div>
                 <br>
                 <div id="submit">
-                    <input class="btn" type="submit" value="SUBMIT">
                     <input type="file" id="file-input" accept="image/*">
                     <label for="file-input" class="upload-button" >UPLOAD IMAGE</label> 
-                    <!-- <a href="profile.html">Submit</a> -->
+                    <input class="btn" type="submit" value="SUBMIT">
                 </div>
             </form>
         </div>
-   
     </div>
-
     <script src="profile.js"></script>
-    
-    
 </body>
 </html> 
