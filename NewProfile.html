@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        #container{
+            position:center;
+            width:100%;
+            height:80%;
+            background:#fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
+            overflow:hidden;
+        }
+
+        #profile-image {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #user-info{
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(315.01deg, #ffb800,#ff710d);
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="container">
+        <div id="profile">
+            
+            <div id="user-info">
+                <h1>User Profile</h1>
+                <p><strong>Full Name:</strong> <span id="full-name"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
+                <p><strong>Email ID:</strong> <span id="email"></span></p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script>
+        // Retrieve query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Get the values and display them in the HTML
+        const fullName = urlParams.get('full-name');
+        const dob = urlParams.get('dob');
+        const mobile = urlParams.get('mobile');
+        const email = urlParams.get('email');
+        
+        document.getElementById('full-name').textContent = fullName;
+        document.getElementById('dob').textContent = dob;
+        document.getElementById('mobile').textContent = mobile;
+        document.getElementById('email').textContent = email;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://kit.fontawesome.com/e62ecdfa8a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="profile.css" >
+    
+
+
+       
+    
+    
+</head>
+<body>
+    
+    <div class="profile">
+        <h2>User Profile</h2>
+        <div class="profile-image">
+            <img id="avatar" src="/default_img.png" alt="Profile Picture" style="height: 100px; width: 100px;">
+        </div>
+        
+        
+
+        <div class="profile-container">
+            
+            <form action="profile.html" method="get" id="profile-form" onsubmit="return validateForm()">
+                
+                <div class="form-group">
+                    <!-- <label for="full-name">Full Name:</label> -->
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="full-name" name="full-name" required placeholder="Full name">
+                </div>
+                <br>
+                <div class="form-group">
+                    <!-- <label for="dob">Date of Birth:</label> -->
+                    <i class="fa-solid fa-calendar"></i>
+                    <input type="date" id="dob" name="dob" required placeholder="DOB">
+                </div>
+                <br>
+                <div class="form-group">
+                    <!-- <label for="mobile">Mobile Number:</label> -->
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" id="mobile" name="mobile" required placeholder="Mobile Number:">
+                </div>
+                <br>
+                <div class="form-group">
+                    <!-- <label for="email">Email ID:</label> -->
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" name="email" required placeholder="Email ID:" >
+                </div>
+                <br>
+                <div id="submit">
+                    <input class="btn" type="submit" value="SUBMIT">
+                    <input type="file" id="file-input" accept="image/*">
+                    <label for="file-input" class="upload-button" >UPLOAD IMAGE</label> 
+                    <!-- <a href="profile.html">Submit</a> -->
+                </div>
+            </form>
+        </div>
+   
+    </div>
+
+    <script src="app.js"></script>
+    
+    
+</body>
+</html> 
