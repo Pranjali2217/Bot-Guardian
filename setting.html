@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="setting.css">
+          <!-- Boxicons CDN Link -->
+          <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Settings Menu</title>
+
+</head> 
+<body>
+
+    <div class="sidebar" >
+
+        <div class="logo-details" >
+            <i class='bx '></i>
+            <!-- <img src="logo.png" alt="John" style="width:30%" > -->
+            <span class="logo_name"  >AI FRIEND</span>
+        </div>
+
+        <div class="card">
+
+            <img src="profile.jpeg" alt="John" style="width:50%">
+            <a href="#">
+                <!-- <i class='bx bxs-user-circle'></i> -->
+                <!-- <i class='bx '></i> -->
+                <span class="links_name"></span>
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="home.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="Profile.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="links_name">Profile</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    <!-- <i class='bx bx-list-ul'></i> -->
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">New Chat</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <!-- <i class='bx bx-list-ul'></i> -->
+                    <i class='bx bx-history'></i>
+                    <span class="links_name">History</span>
+                </a>
+            </li>
+
+            <li class="setting">
+                <a href="#">
+                    <i class='bx bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+            </li>
+
+            <li class="log_out">
+                <a href="#">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">DASHBOARD</span>
+            </div>
+
+            <div class="profile-details">
+                <span class="admin_name"> <a href="Friend.html"><img src="AI.jpg" alt=""></a> </span>
+            </div>
+        </nav>
+
+
+  <div class="menu">
+
+	<div class="menu-body">
+		<a href="#"><ion-icon name="settings-outline"></ion-icon>Account Settings</a>
+		<a href="#"><ion-icon name="information-circle-outline"></ion-icon>About</a>
+		<a href="#"><ion-icon name="mail-outline"></ion-icon>Support</a>
+        <a href="#"><ion-icon name="chatbox-ellipses-outline"></ion-icon>Give Feedback</a>
+	</div>
+
+</div>
+
+
+<script>
+  // Just a tiny bit of JavaScript to add classnames to the HTML-element on toggle
+  var html = document.getElementsByTagName('html');
+  var radios = document.getElementsByName('themes'); 
+
+  for (i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('change', function() {
+      html[0].classList.remove(html[0].classList.item(0));
+      html[0].classList.add(this.id);
+    });
+}
+</script>
+</body>
+</html>

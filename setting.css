@@ -1,142 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-sarif;
-    
-}
-
-body{
+/* 
+		Project: Setting Menu
+    Created: Thursday, 10 February 2022
+    Author: Jamshid Elmi 
+    Tutorial: https://youtu.be/DzZbbXaLWeE
+*/
+:root {
+    --c-text-primary: #191919;
+    --c-text-secondary: #737374;
+    --c-border-primary: #ccc;
+    --c-bg-body: #ccc;
+    --c-bg-primary: #fff;
+    --c-bg-secondary: #d4d8dd;
+    --c-bg-button: #fff;
+  }
+  :root.dark-theme {
+    --c-text-primary: #eee;
+    --c-text-secondary: #d3d5db;
+    --c-border-primary: #454545;
+    --c-bg-body: #5e5e5e;
+    --c-bg-primary: #323339;
+    --c-bg-secondary: #222128;
+    --c-bg-button: #494a50;
+  }
+  :root.black-theme {
+    --c-text-primary: #edeeef;
+    --c-text-secondary: #d4d7e1;
+    --c-border-primary: #323232;
+    --c-bg-body: #000;
+    --c-bg-primary: #1b1d23;
+    --c-bg-secondary: #000001;
+    --c-bg-button: #343844;
+  }
+  
+  body {
     display: flex;
-    align-items: center;
+    font-family: sans-serif;
+    line-height: 1.5;
     justify-content: center;
-    min-height: 100vh;
-    background: #d3d3d3;
-}
-
-
-
-.profile {
-    position:fixed;
-    width:100%;
-    height:100%;
-    margin-top: 40px;
-    /* margin-left: 10px; */
-    padding-left: 10%;
-    padding-right: 20%;
-    /* border-radius: 15px; */
-    /* box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3); */
-    overflow:hidden;
-    text-align: center;
-    /* background: linear-gradient(315.01deg, #ffb800,#ff710d); */
-    background-color: white;
-}
-
-
-.profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border:1px solid  #ff710d;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.profile-image #avatar {
+    background-color: var(--c-bg);
+    transform: background-color 1s ease;
+    color: var(--c-text-primary);
+  }
+  
+  .menu {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-form{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* width: 40%; */
-    min-width: 238px;
-    padding: 0 10px;
+    margin-top: 80px;
+    /* max-width: 320px; */
+    background-color: var(--c-bg-primary);
+    transition: background-color .30s ease;
+    /* border-radius: 15px; */
+  }
+  
+  /* header */
+  .menu-header {
+    padding: 1rem;
+  }
+  
+  .menu-heaser-title {
+    font-size: 1.2rem;
+    color: var(--c-text-secondary);
+    font-weight: 700;
+  }
+  
+  
+  
+  /* Menu body */
+  .menu-body {
+    padding: 1rem;
+    /* border-top: 1px solid var(--c-border-primary); */
+    transition: border-color .30s ease;
+  }
+  
+  .menu-body a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    padding: 0.6rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: .30s ease;
+    background-color: white;
+  }
    
+  .menu-body a:hover {
+    background-color: var(--c-bg-secondary);
+  }
+  
+  ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    margin-top: 2px;
+  }
 
-}
-
-.form-group {
-    width:50%;
-    height: 30px;
-    background: white;
-    /* margin: 10px 0; */
-    border-radius: 50px;
-    display:flex;
-    align-items:center;
-    padding: 25px;
-    border: 2px solid #ffb800;
-
-    
-}
-
-.form-group input{
-    flex:5;
-    background:white;
-    border: none;
-    outline:none;
-    width: 100px;
-    font-size: 18px;
-    font-weight:600;
-    color:#444;
-}
-
-.form-group i{
-    flex:1;
-    text-align:center;
-    color:#666;
-    font-size: 18px;
-}
-
-
-
-#file-input {
-    display: none;
-}
-
-.upload-button {
-    background: linear-gradient(315.01deg, #ffb800,#ff710d);
-    color:#070404;
-    font-size: 18px;
-    border-radius: 50px;
-    margin: 10px 0;
-    width: 150px;
-    height:40px;
-    border: none;
-    cursor:pointer;
-    padding: 11px;
-}
-
-.profile h2{
-    margin-top: 10px;
-    margin-bottom: 10px ;
-    color: #ff710d;
-}
-#user-info {
-   
-    margin-top: 20px;
-}
-
-.btn{
-    background: linear-gradient(315.01deg, #ffb800,#ff710d);
-    color:#070404;
-    font-size: 18px;
-    border-radius: 50px;
-    margin: 10px 0;
-    width: 150px;
-    height:40px;
-    border: none;
-    cursor:pointer;
-    padding: 11px;
-}
-
-/* Import Google font - Poppins */
+  /* Import Google font - Poppins */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
 
@@ -170,9 +127,9 @@ form{
     /* --background-color:white; */
   }
   
-  /* body {
+  body {
     background: var(--outgoing-chat-bg);
-  } */
+  }
   
   /* Chats container styling */
   .chat-container {
@@ -465,9 +422,9 @@ form{
   } */
   
   .sidebar {
-    position:fixed;
+    position: fixed;
     height: 100%;
-    width: 100%;
+    width: 240px;
     background: linear-gradient(315.0deg, #b9870a, #ff710d);
     transition: all 0.5s ease;
   }
@@ -528,7 +485,6 @@ form{
     text-align: center;
     font-size: 20px;
     color: #fff;
-    position: inherit;
   }
   
   .sidebar .nav-links li a .links_name {
@@ -536,7 +492,6 @@ form{
     font-size: 20px;
     font-weight: 400;
     white-space: nowrap;
-    position: inherit;
   }
   
   .sidebar .nav-links .log_out {
@@ -599,10 +554,10 @@ form{
     margin: 0;
     padding: 0;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    /* background-color: #030303; */
+    background-color: #030303;
   }
   
   /* for voice */
@@ -970,4 +925,33 @@ form{
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
   
   
- 
+  /* style */
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
