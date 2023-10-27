@@ -82,7 +82,7 @@ const showTypingAnimation = () => {
     // Display the typing animation and call the getChatResponse function
     const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="C:\Users\Akansha\Documents\RSL\Bot-Guardian\bot" alt="bot-img">
+                        <img src="bot.png" alt="bot-img">
                         <div class="typing-animation">
                             <div class="typing-dot" style="--delay: 0.2s"></div>
                             <div class="typing-dot" style="--delay: 0.3s"></div>

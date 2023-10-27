@@ -32,9 +32,6 @@
   /* --background-color:white; */
 }
 
-body {
-  background: var(--outgoing-chat-bg);
-}
 
 /* Chats container styling */
 .chat-container {
