@@ -41,6 +41,7 @@ body {
   overflow-y: auto;
   max-height: 100vh;
   padding-bottom: 150px;
+  margin-right: 50px;
 }
 
 :where(.chat-container, textarea)::-webkit-scrollbar {
@@ -62,7 +63,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 10vh;
+  height: 70vh;
   padding: 0 10px;
   text-align: center;
   color: var(--text-color);
@@ -180,9 +181,9 @@ span.material-symbols-rounded {
 
 /* Typing container styling */
 .typing-container {
-  position:absolute;
+  position:fixed;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   display: flex;
   padding: 20px 10px;
   justify-content: center;
@@ -239,7 +240,7 @@ span.material-symbols-rounded {
   font-size: 1.35rem;
   align-items: center;
   justify-content: center;
-  color: var(--icon-color);
+  color: #ff710d ;
 }
 
 .typing-textarea span {
@@ -318,11 +319,12 @@ span.material-symbols-rounded {
   }
 }
 
+/* sidebar styling */
 
 .sidebar {
   position: fixed;
   height: 100%;
-  width: 240px;
+  width: 200px;
   background: linear-gradient(315.0deg, #b9870a, #ff710d);
   transition: all 0.5s ease;
 }
@@ -331,24 +333,27 @@ span.material-symbols-rounded {
   width: 60px;
 }
 
-.sidebar .logo-details {
-  height: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .logo-details i {
-  font-size: 50%;
-  font-weight: 500;
-  color: #fff;
-  min-width: 60px;
-  text-align: center
-}
 
 .sidebar .logo-details .logo_name {
   color: #fff;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 550;
+  margin-left: 30px;
+  
+}
+
+.card {
+  /* box-shadow: 0 10px 8px 0 rgba(1, 1, 1, 0.2); */
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+ 
+  /* font-family: ; */
+}
+
+.card img{
+  margin-top: 10px;
+   border-radius: 100%;
 }
 
 .sidebar .nav-links {
@@ -391,6 +396,14 @@ span.material-symbols-rounded {
   font-weight: 400;
   white-space: nowrap;
 }
+/* .sidebar .nav-links .setting{
+  position:absolute;
+  bottom: 5%; 
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 100%;
+} */
+
 
 .sidebar .nav-links .log_out {
   position:absolute;
@@ -398,18 +411,12 @@ span.material-symbols-rounded {
   width: 100%;
 }
 
-.sidebar .nav-links .setting{
-  position:absolute;
-  /* bottom: 5%; */
-  /* margin-left: 20px;
-  margin-right: 30px; */
-  width: 100%;
-}
 
+/* Home section styling */
 
 .home-section {
   position: relative;
-  background: #d3d3d3;
+  background:white;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
@@ -425,7 +432,7 @@ span.material-symbols-rounded {
 .home-section nav {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  /* height: 10px; */
   background: white ;
   display: flex;
   align-items: center;
@@ -455,7 +462,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background-color: #030303;
+  /* background-color: #030303; */
 }
 
 /* for voice */
@@ -479,7 +486,7 @@ body {
 
 #upload-btn{
   background-color: white;
-  color: #ded0c5;
+  color:#ff710d ;
   margin-right: 5px;
   border: 2px solid #ff710d;
   border-radius: 10px;
@@ -533,13 +540,7 @@ body {
 
 }
 
-.card {
-  /* box-shadow: 0 10px 8px 0 rgba(1, 1, 1, 0.2); */
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-  /* font-family: ; */
-}
+
 
 .title {
   color: rgb(244, 244, 244);
@@ -627,7 +628,7 @@ nav .sidebar-button i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 25vh;
   margin-left: 40%;
   margin-right: 40%;
   /* margin-bottom: 20%; */
