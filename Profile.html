@@ -136,12 +136,23 @@
                 <div id="submit ">
                     <input type="file" id="file-input" accept="image/*">
                     <label for="file-input" class="upload-button">UPLOAD IMAGE</label>
-                    <input class="btn" type="submit" value="SUBMIT">
+                    <input class="btn" type="submit" value="SUBMIT" id="submit-button">
                 </div>
             </form>
         </div>
     </div>
     <script src="profile.js"></script>
+    <script>
+        // Get a reference to the "submit" button
+        var submitButton = document.getElementById("submit-button");
+    
+        // Add a click event listener to the button
+        submitButton.addEventListener("click", function() {
+            // Navigate to the "newprofile.html" page when the button is clicked
+            window.location.href = "newprofile.html";
+        });
+    </script>
+    
     </section>
 </body>
 

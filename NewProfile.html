@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Updated Profile</title>
     <link rel="stylesheet" href="profile.css" >
     <style>
 
@@ -12,14 +12,32 @@
 
         #container{
             position:center;
-            width:100%;
+            width:80%;
             height:80%;
             background:#fff;
             border-radius: 15px;
             box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
             overflow:hidden;
+            margin-left: 300px;
+            margin-right: 100px;
         }
 
+        
+        #profile {
+            margin-left: 100px;
+            margin-right: 200px;
+            position:absolute;
+            width: 50%;
+            height: 50%;
+            
+        
+        }
+
+        #profile h1 {
+            padding-top: 20px;
+            color:#ff710d;
+            text-align: center;
+        }
         #profile-image {
             text-align: center;
             padding: 20px;
@@ -33,20 +51,95 @@
         }
 
         #user-info{
-            text-align: center;
-            padding: 20px;
+            text-align: auto;
+            padding: 80px;
             background: linear-gradient(315.01deg, #ffb800,#ff710d);
+            color: black;
         }
+        #user-info img{
+            height:50px;
+            width:50px;
+            border-radius: 100px;
+        }
+
     </style> 
     
 </head>
 
 <body>
+    <div class="sidebar">
+        <div class="card">
+
+            <img src="bot.png" alt="John"  style="width:50%">
+            <!-- <a href="#">
+                <span class="links_name"></span>
+            </a> -->
+        </div><br>
+        
+
+        <ul class="nav-links">
+            <li>
+                <a href="home.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="Profile.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="links_name">Profile</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="newchat.html">
+                    <!-- <i class='bx bx-list-ul'></i> -->
+                    <i class='bx bx-chat'></i>
+                    <span class="links_name">New Chat</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <!-- <i class='bx bx-list-ul'></i> -->
+                    <i class='bx bx-history' ></i>
+                    <span class="links_name">History</span>
+                </a>
+            </li>
+
+            <li >
+                <a href="setting.html">
+                    <i class='bx bx bx-cog'></i>
+                    <span class="links_name">Setting</span>
+                </a>
+            </li>
+
+            <li class="log_out">
+                <a href="index.html">
+                    <!-- <button class="links_name"><i class='bx bx-log-out'></i>log out</button> -->
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+
+
+
+
     <div id="container">
+       
         <div id="profile">
+            <div >
+                <h1>User Profile Information</h1>
+            </div>
             
             <div id="user-info">
-                <h1>User Profile</h1>
+
+                <img id="profile-avatar" src="" alt="Profile Picture">
                 <p><strong>Full Name:</strong> <span id="full-name"></span></p>
                 <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
                 <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
@@ -54,21 +147,23 @@
             </div>
         </div>
     </div>
-    <script type="module" src="firebase.js"></script>
+    <script src="profile.js"></script>
     <script>
         // Retrieve query parameters from the URL
-        const urlParams = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
         
         // Get the values and display them in the HTML
-        const fullName = urlParams.get('full-name');
-        const dob = urlParams.get('dob');
-        const mobile = urlParams.get('mobile');
-        const email = urlParams.get('email');
+        document.getElementById('full-name').textContent = params.get('full-name');
+        document.getElementById('dob').textContent = params.get('dob');
+        document.getElementById('mobile').textContent = params.get('mobile');
+        document.getElementById('email').textContent = params.get('email');
         
-        document.getElementById('full-name').textContent = fullName;
-        document.getElementById('dob').textContent = dob;
-        document.getElementById('mobile').textContent = mobile;
-        document.getElementById('email').textContent = email;
+
+        // Set the src attribute of the profile picture
+        const avatarSrc = params.get('avatar');
+        if (avatarSrc) {
+            document.getElementById('profile-avatar').src = avatarSrc;
+        }
     </script>
     
 </body>
