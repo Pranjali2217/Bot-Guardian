@@ -166,24 +166,22 @@ form{
       margin-bottom: 30px;
       padding-left: 10%;
       padding-right: 15%;
-     
-     
   }
 
-  .home-section{
-    margin-right: 10px;
-    position: relative;
-  }
+    .home-section{
+      margin-right: 10px;
+      /* position: relative; */
+    }
 
     .upload-button {
-     
+      
       font-size: 10px;
       border-radius: 50px;
       margin: 10px 0;
       width: 100px;
       height:40px;
       padding: 11px;
-  }
+    }
 
     .btn{
       
@@ -195,13 +193,13 @@ form{
       padding: 11px;
   }
 
-  .profile-image {
-    width: 75px;
-    height: 75px;
-    border-radius: 35px;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    .profile-image {
+        width: 75px;
+        height: 75px;
+        border-radius: 35px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
   } 
 
   .profile-image #avatar {
