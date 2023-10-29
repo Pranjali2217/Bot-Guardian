@@ -3,25 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="setting.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script src="home.js" defer></script>
+    <title>User Profile</title>
+    <script src="https://kit.fontawesome.com/e62ecdfa8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="profile.css">
+    <!-- <link rel="stylesheet" href="home.css"> -->
 
-    <title>Settings Menu</title>
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable= yes">
+        <script src="profile.js" defer></script> -->
 
+    <style>
+        
+        
+
+        #container{
+            position:absolute;
+            width:50%;
+            height:80%;
+            background:#fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
+            overflow:hidden;
+            margin-left: 500px;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+
+        .btn{
+                background: linear-gradient(315.01deg, #ffb800,#ff710d);
+                color:black;
+                font-size: 18px;
+                width: 150px;
+                height:40px;
+                border: none;
+                cursor:pointer;
+                padding: 11px;
+                margin-left: 250px;
+                margin-top: 40px;
+                text-align: center;
+        }
+    </style>
+    <script src="setting.js" defer></script>           
 </head>
 
 <body>
-
+    
     <div class="sidebar">
-
-        
-        
 
         <div class="card">
 
@@ -81,115 +110,23 @@
         </ul>
     </div>
 
-
     <section class="home-section">
-
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard">DASHBOARD</span>
+                <span class="dashboard">SETTING</span>
             </div>
 
             <div class="profile-details">
                 <span class="admin_name"> <a href="Friend.html"><img src="AI.jpg" alt=""></a> </span>
             </div>
+
         </nav>
+    </section>
 
+        <div id="container">
 
-        <style>
-            /* body {
-            padding: 25px;
-              background-color: white;
-              color: black;
-              font-size: 25px;
-          }
-   */
-            .dark-mode {
-                background-color: black;
-                color: white;
-            }
-
-            .light-mode {
-                background-color: white;
-                color: black;
-            }
-
-            button {
-                border: none;
-                outline: 0;
-                display: inline-block;
-                padding: 8px;
-                color: white;
-                background-color: #ffffff;
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-                font-size: 18px;
-            }
-
-            .setting .button{
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-                font-size: 18px;
-            }   
-
-            
-
-        </style>
-
-
-    <centre>
-        <div class="settings-container" >
-            <h1>SETTINGS</h1>
-
-            <div class="setting">
-                <label for="theme">Theme:</label>
-                <select id="theme">
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
-                </select>
-            </div>
-
-            <div class="setting">
-                <div class="clearallchats"> Clear all Chats: <button class="btn" style="max-width: 60px;" >Clear</button></div>
-            </div>
-
-            <div class="setting">
-                <div class="deleteallAccount"> Delete Account : <button class="btn" style="max-width: 60px;" >Delete</button></div>
-            </div>
-
-            <button id="saveButton" style="max-width: 10%;">Save</button>
         </div>
-    </centre>
+    
 
 
-
-        <script>
-            document.onkeypress = function (e) {
-                e = e || window.event;
-
-                if (e.keCode === 13) {
-                    document.documentElement.classlist.toggle(dark - mode);
-                }
-            }
-        </script>
-
-        <script src="script.js">
-
-            function darkMode() {
-                let element = document.body;
-                let content = document.getElementById("DarkModetext");
-                element.className = "dark-mode";
-                content.innerText = "Dark Mode is ON";
-            }
-            function lightMode() {
-                let element = document.body;
-                let content = document.getElementById("DarkModetext");
-                element.className = "light-mode";
-                content.innerText = "Dark Mode is OFF";
-            }
-        </script>
-</body>
-
-</html>
