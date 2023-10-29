@@ -17,18 +17,14 @@ body{
 
 
 .profile {
-    position:fixed;
+    position:absolute;
     width:100%;
     height:100%;
     margin-top: 40px;
-    /* margin-left: 10px; */
     padding-left: 10%;
     padding-right: 20%;
-    /* border-radius: 15px; */
-    /* box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3); */
     overflow:hidden;
     text-align: center;
-    /* background: linear-gradient(315.01deg, #ffb800,#ff710d); */
     background-color: white;
 }
 
@@ -158,6 +154,7 @@ form{
     .profile h2{
       margin-top: 15px;
       margin-bottom: 8px ;
+      margin-left: 2px;
       
     }
 
@@ -171,6 +168,11 @@ form{
       padding-right: 15%;
      
      
+  }
+
+  .home-section{
+    margin-right: 10px;
+    position: relative;
   }
 
     .upload-button {
@@ -401,6 +403,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   color: #ff710d;
+  margin-left: 5px;
 }
 
 nav .sidebar-button i {

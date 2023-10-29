@@ -31,10 +31,9 @@ const fileInput = document.getElementById('file-input');
             const dob = document.getElementById('dob').value;
             const mobile = document.getElementById('mobile').value;
             const email = document.getElementById('email').value;
-            const avatarSrc = avatar.src;
     
             // Build the URL with query parameters
-            const profileURL = `Newprofile.html?full-name=${encodeURIComponent(fullName)}&dob=${encodeURIComponent(dob)}&mobile=${encodeURIComponent(mobile)}&email=${encodeURIComponent(email)}`;
+            const profileURL = `NewProfile.html?full-name=${fullName}&dob=${dob}&mobile=${mobile}&email=${email}`;
     
             // Redirect to the profile.html page with the query parameters
             window.location.href = profileURL;

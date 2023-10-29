@@ -17,8 +17,8 @@ const loadDataFromLocalstorage = () => {
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
     const defaultText = `<div class="default-text">
-                            <h1>bot guardian</h1>
-                            <p>sthfhrtsghfvj<br>tdfyugiukfdtywstrdy</p>                           
+                            <h1>Bot-Guardian</h1>
+                            <p>Elevating Your AI Experience - Unlocking the power of advanced chatbot technology with <br>improved features, secured image uploads, password storage, and voice-activated search, all safeguarded by our trusted AI guardian.</p>                           
                        </div>`
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
