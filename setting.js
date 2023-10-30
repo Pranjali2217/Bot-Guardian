@@ -3,13 +3,26 @@ const fileInput = document.getElementById('file-input');
 
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
+        let sidebarBtnhide = document.querySelector(".sidebarBtn");
+        let sidehide = document.getElementById('sidehide');
+
         sidebarBtn.onclick = function () {
             sidebar.classList.toggle("active");
             if (sidebar.classList.contains("active")) {
                 sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+                sidehide.style.display='none'
             } else
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+                sidehide.style.display='block'
         }
+        // sidebarBtnhide.onclick = function (){
+        //     if(sidebarBtn){
+        //         sidehide.style.display='hidden'
+        //     }
+        //     else{
+        //         sidehide.style.display='block'
+        //     }
+        // }
     
         fileInput.addEventListener('change', function () {
             const file = fileInput.files[0];
