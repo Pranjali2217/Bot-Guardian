@@ -15,8 +15,6 @@
         <script src="profile.js" defer></script> -->
 
     <style>
-        
-        
 
         #container{
             position:absolute;
@@ -29,6 +27,12 @@
             margin-left: 500px;
             margin-right: 100px;
             margin-top: 100px;
+        }
+
+        #container h1{
+            margin-top: 20px;
+            margin-left: 20px;
+            color:#ff710d;
         }
 
         .btn{
@@ -44,6 +48,28 @@
                 margin-top: 40px;
                 text-align: center;
         }
+
+        div{
+            margin-bottom: 20px;
+        }
+        .setting{
+            margin-left: 220px;
+            padding-top: 100px;
+            
+       
+        }
+
+        .light-theme {
+            background-color: #fff;
+            color: #000;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+
+    
     </style>
     <script src="setting.js" defer></script>           
 </head>
@@ -125,6 +151,33 @@
     </section>
 
         <div id="container">
+            <h1>Account Management</h1>
+
+            <!-- Change Theme Option -->
+            <div class="setting">
+                <!-- <div><h1>Account Management</h1><div> -->
+                <div class="theme">
+                    <label for="themeSelect">Select Theme:</label>
+                    <select id="themeSelect">
+                        <option value="light">Light Theme</option>
+                        <option value="dark">Dark Theme</option>
+                    </select>
+                    <button onclick="changeTheme()">Apply</button>
+                </div>
+
+                <!-- Delete Account Option -->
+                <div class="delete">
+                    <label for="deleteAccount">Delete Account:</label>
+                    <button onclick="deleteAccount()">Delete Account</button>
+                </div>
+
+                <!-- Password Reset Option -->
+                <div class="reset">
+                    <label for="resetPassword">Reset Password:    </label>
+                    <button onclick="resetPassword()">Reset Password</button>
+                </div>
+            </div>
+
 
         </div>
     
