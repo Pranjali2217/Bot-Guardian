@@ -9,54 +9,54 @@
     <link rel="stylesheet" href="profile.css">
     <!-- <link rel="stylesheet" href="home.css"> -->
 
-        <!-- Boxicons CDN Link -->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable= yes">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable= yes">
         <script src="profile.js" defer></script> -->
 
     <style>
-
-        #container{
-            position:absolute;
-            width:50%;
-            height:80%;
+        #container {
+            position: absolute;
+            width: 50%;
+            height: 80%;
             /* background:#fff; */
             border-radius: 15px;
-            box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
-            overflow:hidden;
+            box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+            overflow: hidden;
             margin-left: 500px;
             margin-right: 100px;
             margin-top: 100px;
         }
 
-        #container h1{
+        #container h1 {
             margin-top: 20px;
             margin-left: 20px;
-            color:#ff710d;
+            color: #ff710d;
         }
 
-        .btn{
-                background: linear-gradient(315.01deg, #ffb800,#ff710d);
-                color:black;
-                font-size: 18px;
-                width: 150px;
-                height:40px;
-                border: none;
-                cursor:pointer;
-                padding: 11px;
-                margin-left: 250px;
-                margin-top: 40px;
-                text-align: center;
+        .btn {
+            background: linear-gradient(315.01deg, #ffb800, #ff710d);
+            color: black;
+            font-size: 18px;
+            width: 150px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            padding: 11px;
+            margin-left: 250px;
+            margin-top: 40px;
+            text-align: center;
         }
 
-        div{
+        div {
             margin-bottom: 20px;
         }
-        .setting{
+
+        .setting {
             margin-left: 220px;
             padding-top: 100px;
             font-size: 19px;
-       
+
         }
 
 
@@ -64,30 +64,28 @@
             background-color: #fff;
             color: #000;
         }
+
         .dark-theme {
             background-color: #333;
             color: #fff;
             /* box-shadow: 0 4px 20px 0 rgba(249, 246, 246, 0.964),0 6px 20px 0 rgba(249, 241, 241, 0.964); */
         }
-
-
-    
     </style>
-    <script src="setting.js" defer></script>           
+    <script src="setting.js" defer></script>
 </head>
 
 <body>
-    
+
     <div class="sidebar">
 
         <div class="card">
 
-            <img src="bot.png" alt="John"  style="width:50%">
+            <img src="bot.png" alt="John" style="width:50%">
             <!-- <a href="#">
                 <span class="links_name"></span>
             </a> -->
         </div>
-        
+
 
         <ul class="nav-links">
             <li>
@@ -116,12 +114,12 @@
             <li>
                 <a href="history.html">
                     <!-- <i class='bx bx-list-ul'></i> -->
-                    <i class='bx bx-history' ></i>
+                    <i class='bx bx-history'></i>
                     <span class="links_name">History</span>
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="setting.html">
                     <i class='bx bx bx-cog'></i>
                     <span class="links_name">Settings</span>
@@ -141,54 +139,53 @@
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
-<<<<<<< HEAD
                 <i class='bx bx-menu'></i>
                 <span class="dashboard">Bot gaurdian</span>
-=======
                 <i class='bx bx-menu sidebarBtn'></i>
                 <span class="dashboard">SETTINGS</span>
->>>>>>> 5c164983b19ff886ecfba079f5477c6e797672dd
+
+                5c164983b19ff886ecfba079f5477c6e797672dd
             </div>
 
             <div class="profile-details">
                 <a href="AI.html">
-                <span class="admin_name"><img src="AI.jpg" alt=""></a> </span>
+                    <span class="admin_name"><img src="AI.jpg" alt=""></a> </span>
             </div>
 
         </nav>
     </section>
 
-        <div id="container">
-            <h1>Account Management</h1>
+    <div id="container">
+        <h1>Account Management</h1>
 
-            <!-- Change Theme Option -->
-            <div class="setting">
-                <!-- <div><h1>Account Management</h1><div> -->
-                <div class="theme">
-                    <label class="select-theme" for="themeSelect">Select Theme:</label>
-                    <select id="themeSelect">
-                        <option value="light">Light Theme</option>
-                        <option value="dark">Dark Theme</option>
-                    </select>
-                    <button onclick="changeTheme()">Apply</button>
-                </div>
-
-                <!-- Delete Account Option -->
-                <div class="delete">
-                    <label for="deleteAccount">Delete Account:</label>
-                    <button onclick="deleteAccount()">Delete Account</button>
-                </div>
-
-                <!-- Password Reset Option -->
-                <div class="reset">
-                    <label for="resetPassword">Reset Password:    </label>
-                    <button onclick="resetPassword()">Reset Password</button>
-                </div>
+        <!-- Change Theme Option -->
+        <div class="setting">
+            <!-- <div><h1>Account Management</h1><div> -->
+            <div class="theme">
+                <label class="select-theme" for="themeSelect">Select Theme:</label>
+                <select id="themeSelect">
+                    <option value="light">Light Theme</option>
+                    <option value="dark">Dark Theme</option>
+                </select>
+                <button onclick="changeTheme()">Apply</button>
             </div>
 
+            <!-- Delete Account Option -->
+            <div class="delete">
+                <label for="deleteAccount">Delete Account:</label>
+                <button onclick="deleteAccount()">Delete Account</button>
+            </div>
 
+            <!-- Password Reset Option -->
+            <div class="reset">
+                <label for="resetPassword">Reset Password: </label>
+                <button onclick="resetPassword()">Reset Password</button>
+            </div>
         </div>
-    
-</body>
-</html>
 
+
+    </div>
+
+</body>
+
+</html>
