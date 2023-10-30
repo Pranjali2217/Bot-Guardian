@@ -36,7 +36,6 @@
 /* Chats container styling */
 .chat-container {
   overflow-y: auto;
-  /* max-height: 100vh; */
   padding-bottom: 150px;
   margin-right: 50px;
   height: 400px;
@@ -106,6 +105,13 @@
 span.material-symbols-rounded {
   user-select: none;
   cursor: pointer;
+}
+
+span.new_chat {
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid #ff710d;
+  
 }
 
 .chat .chat-content span {
@@ -258,11 +264,13 @@ span.material-symbols-rounded {
 }
 
 
+
 .typing-controls span {
   margin-left: 7px;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   /* background: var(--incoming-chat-bg); */
   outline: 2px solid #ff710d;
+  text-align: center;
 }
 
 .typing-controls span:hover {
@@ -853,3 +861,4 @@ nav .profile-details i {
   margin-bottom: 30px;
   height: 1500px; /* Used in this example to enable scrolling */
 }
+
