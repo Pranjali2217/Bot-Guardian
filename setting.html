@@ -60,7 +60,7 @@
         }
 
 
-        .light-theme {
+        /* .light-theme {
             background-color: #fff;
             color: #000;
         }
@@ -68,8 +68,8 @@
         .dark-theme {
             background-color: #333;
             color: #fff;
-            /* box-shadow: 0 4px 20px 0 rgba(249, 246, 246, 0.964),0 6px 20px 0 rgba(249, 241, 241, 0.964); */
-        }
+            box-shadow: 0 4px 20px 0 rgba(249, 246, 246, 0.964),0 6px 20px 0 rgba(249, 241, 241, 0.964);
+        } */
     </style>
     <script src="setting.js" defer></script>
 </head>
@@ -139,15 +139,8 @@
     <section class="home-section">
         <nav>
             <div class="sidebar-button">
-                <i class='bx bx-menu'></i>
-                <span class="dashboard">Bot gaurdian</span>
-                <i class='bx bx-menu '></i>
-                
-            </div>
-
-            <div class="profile-details">
-                <a href="AI.html">
-                    <span class="admin_name"><img src="AI.jpg" alt=""></a> </span>
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Bot-guardian</span>
             </div>
 
         </nav>
@@ -158,15 +151,20 @@
 
         <!-- Change Theme Option -->
         <div class="setting">
-            <!-- <div><h1>Account Management</h1><div> -->
-            <div class="theme">
+           
+            <!-- <div class="theme">
                 <label class="select-theme" for="themeSelect">Select Theme:</label>
                 <select id="themeSelect">
                     <option value="light">Light Theme</option>
                     <option value="dark">Dark Theme</option>
                 </select>
                 <button onclick="changeTheme()">Apply</button>
+            </div> -->
+            <div class="clear-chat">
+                <label for="clear chat">Clear All Chats:</label>
+                <button onclick="ClearChat()">clear</button>
             </div>
+
 
             <!-- Delete Account Option -->
             <div class="delete">
