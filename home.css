@@ -36,9 +36,11 @@
 /* Chats container styling */
 .chat-container {
   overflow-y: auto;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   padding-bottom: 150px;
   margin-right: 50px;
+  height: 400px;
+  border: 3px solid #ff710d;
 }
 
 :where(.chat-container, textarea)::-webkit-scrollbar {
@@ -430,7 +432,7 @@ span.material-symbols-rounded {
   display: flex;
   justify-content: space-between;
   /* height: 10px; */
-  background: white ;
+  /* background: white ; */
   display: flex;
   align-items: center;
   position: fixed;

@@ -360,7 +360,7 @@ form{
   display: flex;
   justify-content: space-between;
   height: 80px;
-  background: white ;
+  /* background: white ; */
   display: flex;
   align-items: center;
   position: fixed;
