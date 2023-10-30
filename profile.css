@@ -470,12 +470,14 @@ nav .sidebar-button i {
 }
 
 button {
-  padding: 15px 30px;
+  padding: 10px 20px;
   margin: 0 1px;
   /* background-color:  linear-gradient(315.0deg, #ffb800, #ff710d); */
   background: linear-gradient(315.01deg,#ffb800,#ff710d);
-  border-radius: 4%;
+  border-radius: 20px;
   color: black;
+  font-size: 18px;
+  border: none;
   /* margin: top 20px;  */
  
 }
