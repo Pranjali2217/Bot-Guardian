@@ -5,62 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Updated Profile</title>
     <link rel="stylesheet" href="profile.css" >
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/e62ecdfa8a.js" crossorigin="anonymous"></script>
     <style>
 
        
 
 
         #container{
-            position:center;
-            width:80%;
-            height:80%;
+            margin-left: 130px;
+            margin-right: 200px;
+            position:absolute;
+            width: 70%;
+            height: 70%;
             background:#fff;
             border-radius: 15px;
             box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3),0 6px 20px 0 rgba(0,0,0,0.3);
             overflow:hidden;
-            margin-left: 300px;
-            margin-right: 100px;
+            margin-top: 100px;
+           
         }
 
-        
-        #profile {
-            margin-left: 60px;
-            margin-right: 200px;
-            position:absolute;
-            width: 50%;
-            height: 50%;
-            
-        
-        }
+       
 
-        #profile h1 {
+        #container h1 {
             padding-top: 20px;
             color:#ff710d;
+            /* margin-left: 40px;
+            margin-right: 100px; */
             text-align: center;
         }
       
         #user-info{
-            text-align: auto;
-            margin-left: 200px;
-            padding-left: 50px;
-            /* background: linear-gradient(315.01deg, #ffb800,#ff710d); */
             color: black; 
-            margin-top: 50px;
+            margin-top: 30px;
+            margin-left: 250px;
         } 
 
-        .btn{
+        .btn {
                 background: linear-gradient(315.01deg, #ffb800,#ff710d);
-                color:black;
+                color:#030202;
                 font-size: 18px;
                 width: 150px;
                 height:40px;
                 border: none;
                 cursor:pointer;
                 padding: 11px;
-                margin-left: 250px;
-                margin-top: 40px;
+                margin-left: 290px;
+                margin-top:30px;
                 text-align: center;
+        
         }
+      
+
+        @media screen and (max-width: 600px){
+
+            #container{
+            margin-left: 50px;
+            margin-right: 90px;
+            position:absolute;
+            width: 70%;
+            height: 70%;
+            margin-top: 100px;
+           
+        }
+
+
+            #container h1 {
+            padding-top: 20px;
+            text-align: center;
+            font-size: 22px;
+        }
+
+
+        #user-info{
+           
+            margin-top: 30px;
+            margin-left: 30px;
+            font-size: 12px;
+        } 
+           
+
+            .btn {
+               
+                font-size: 10px;
+                width: 100px;
+                height:40px;
+                padding: 11px;
+                margin-left: 60px;
+                margin-top:30px;
+                margin-bottom: 10px;
+                
+        
+        }
+            .home-section{
+            margin-right: 10px;
+            /* position: relative; */
+            }
+
+            
+
+            .profile-image {
+                width: 75px;
+                height: 75px;
+                border-radius: 35px;
+                margin: 0 auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+        } 
+
+        .profile-image #avatar {
+            width: 75px;
+            height:75px;
+            object-fit: cover; 
+            padding:unset;
+        }
+        nav .sidebar-button i {
+            font-size: 25px;
+            margin-right: 10px;
+        }
+
+  
+}
 
     </style> 
     
@@ -102,7 +168,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="history.html">
                     <!-- <i class='bx bx-list-ul'></i> -->
                     <i class='bx bx-history' ></i>
                     <span class="links_name">History</span>
@@ -125,32 +191,52 @@
             </li>
         </ul>
     </div>
-    
 
 
-
-
-    <div id="container">
-       
-        <div id="profile">
-            <h1>User Profile Information</h1>
+         
+    <section class="home-section">
         
-            <div class="profile-image">
-                <img id="avatar" src="/default_img.png" alt="Profile Picture" >
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">DASHBOARD</span>
             </div>
-            
-            <div id="user-info">
-                <p><strong>Full Name:</strong> <span id="full-name"></span></p><br>
-                <p><strong>Date of Birth:</strong> <span id="dob"></span></p><br>
-                <p><strong>Mobile Number:</strong> <span id="mobile"></span></p><br>
-                <p><strong>Email ID:</strong> <span id="email"></span></p>
+
+            <div class="profile-details">
+                <span class="admin_name"> <a href="Friend.html"><img src="AI.jpg" alt=""></a> </span>
             </div>
-            <div id="update">
-                <input class="btn" type="update" placeholder="Update Profile" id="update-button">
-            </div>
-        </div>
+
+        </nav>
+
        
-    </div>
+        <div id="container">
+                <h1>User Profile Information</h1>
+            
+                <div class="profile-image">
+                    <img id="avatar" src="/default_img.png" alt="Profile Picture" >
+                </div>
+                
+                <div id="user-info">
+                    <p> <i class="fa-solid fa-user"><strong> Full Name:</strong></i>
+                        <span id="full-name"></span></p>
+                    <br>
+                    <p> <i class="fa-solid fa-calendar"><strong> Date of Birth:</strong></i>
+                        <span id="dob"></span></p>
+                    <br>
+                    <p> <i class="fa-solid fa-phone"><strong> Mobile Number:</strong></i>
+                        <span id="mobile"></span></p>
+                    <br>
+                    <p><i class="fa-solid fa-envelope"><strong> Email ID:</strong></i>
+                        <span id="email"></span></p>
+                </div>
+                <div id="update">
+                    <a href="Profile.html">
+                    <input class="btn" type="update" placeholder="Update Profile" >
+                    </a>
+                </div>
+           
+        
+        </div>
     <script src="profile.js"></script>
     <script>
         
@@ -171,6 +257,13 @@
         }
 
     </script>
+    
+    </section>
+    
+
+
+
+
     
 </body>
 </html>
