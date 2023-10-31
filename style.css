@@ -121,6 +121,16 @@ form.sign-up-form{
     background:#ff710d;
 }
 
+.forgot-pass-remember-me{
+	display: flex;
+	justify-content: center;
+	gap: 90px;
+}
+
+.forgot-pass-remember-me #ForgotPassword:hover{
+	color: #008d7f;
+}
+
 .social-text{
     margin:10px 0;
     font-size:16px;

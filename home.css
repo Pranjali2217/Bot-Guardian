@@ -222,6 +222,8 @@ span.new_chat {
   outline: none;
 }
 
+
+
 .typing-textarea textarea::placeholder {
   color: black;
 }
