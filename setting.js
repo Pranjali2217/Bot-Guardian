@@ -1,5 +1,5 @@
-const fileInput = document.getElementById('file-input');
-        const avatar = document.getElementById('avatar');
+// const fileInput = document.getElementById('file-input');
+//         const avatar = document.getElementById('avatar');
 
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
@@ -24,32 +24,32 @@ const fileInput = document.getElementById('file-input');
         //     }
         // }
     
-        fileInput.addEventListener('change', function () {
-            const file = fileInput.files[0];
+        // fileInput.addEventListener('change', function () {
+        //     const file = fileInput.files[0];
     
-            if (file) {
-                const reader = new FileReader();
+        //     if (file) {
+        //         const reader = new FileReader();
     
-                reader.onload = function (e) {
-                    avatar.src = e.target.result;
-                };
+        //         reader.onload = function (e) {
+        //             avatar.src = e.target.result;
+        //         };
     
-                reader.readAsDataURL(file);
-            }
-        });
+        //         reader.readAsDataURL(file);
+        //     }
+        // });
 
         
         // JavaScript functions for theme change, account deletion, and password reset
-        function changeTheme() {
-            const themeSelect = document.getElementById("themeSelect");
-            const selectedTheme = themeSelect.value;
+        // function changeTheme() {
+        //     const themeSelect = document.getElementById("themeSelect");
+        //     const selectedTheme = themeSelect.value;
 
-            if (selectedTheme === "dark") {
-                document.body.className = "dark-theme";
-            } else {
-                document.body.className = "light-theme";
-            }
-        }
+        //     if (selectedTheme === "dark") {
+        //         document.body.className = "dark-theme";
+        //     } else {
+        //         document.body.className = "light-theme";
+        //     }
+        // }
 
         function deleteAccount() {
             const confirmDelete = confirm("Are you sure you want to delete your account? This action cannot be undone.");
@@ -62,4 +62,13 @@ const fileInput = document.getElementById('file-input');
         function resetPassword() {
             // You would typically navigate to a password reset page.
             alert("Password reset link sent to your email.");
-        }           
+        } 
+        
+        // this code is for logout btn pop up
+        function confirmLogout() {
+            if (window.confirm("Are you sure you want to log out?")) {
+                // Redirect to the login page
+                window.location.href = "index.html";
+            }
+        }
+

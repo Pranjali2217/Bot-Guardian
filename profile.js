@@ -42,4 +42,13 @@ const fileInput = document.getElementById('file-input');
             return false;
         }
 
+// this code is for logout btn pop up
+function confirmLogout() {
+    if (window.confirm("Are you sure you want to log out?")) {
+        // Redirect to the login page
+        window.location.href = "index.html";
+    }
+}
+
+
        

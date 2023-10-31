@@ -7,3 +7,12 @@ sidebarBtn.onclick = function () {
     } else
         sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
+
+// this code is for logout btn pop up
+function confirmLogout() {
+    if (window.confirm("Are you sure you want to log out?")) {
+        // Redirect to the login page
+        window.location.href = "index.html";
+    }
+}
+
