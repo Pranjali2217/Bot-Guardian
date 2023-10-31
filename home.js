@@ -3,7 +3,6 @@ const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
 const voiceButton = document.querySelector("#voice-btn");
-const deleteButton = document.querySelector("#delete-btn");
 const uploadButton = document.querySelector("#upload-btn");
 
 let userText = null;
@@ -70,14 +69,6 @@ const getChatResponse = async (incomingChatDiv) => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 }
 
-const copyResponse = (copyBtn) => {
-    // Copy the text content of the response to the clipboard
-    const reponseTextElement = copyBtn.parentElement.querySelector("p");
-    navigator.clipboard.writeText(reponseTextElement.textContent);
-    copyBtn.textContent = "done";
-    setTimeout(() => copyBtn.textContent = "content_copy", 1000);
-}
-
 const showTypingAnimation = () => {
     // Display the typing animation and call the getChatResponse function
     const html = `<div class="chat-content">
@@ -120,14 +111,6 @@ const handleOutgoingChat = () => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
 }
-
-deleteButton.addEventListener("click", () => {
-    // Remove the chats from local storage and call loadDataFromLocalstorage function
-    if(confirm("Are you sure you want to delete all the chats?")) {
-        localStorage.removeItem("all-chats");
-        loadDataFromLocalstorage();
-    }
-});
 
 themeButton.addEventListener("click", () => {
     // Toggle body's class for the theme mode and save the updated theme to the local storage 
@@ -261,7 +244,7 @@ document.getElementById('newchat').addEventListener('click', function() {
     clearChatMessages();
 
     // Reload the page
-    location.reload();
+    // location.reload();
 });
 
 function clearChatMessages() {
@@ -272,4 +255,6 @@ function clearChatMessages() {
         
    
 }
+
+
 

@@ -1,15 +1,16 @@
+// for sidebar btn
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function () {
+    sidebar.classList.toggle("active");
+    if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+    } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+
 const fileInput = document.getElementById('file-input');
         const avatar = document.getElementById('avatar');
-
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".sidebarBtn");
-        sidebarBtn.onclick = function () {
-            sidebar.classList.toggle("active");
-            if (sidebar.classList.contains("active")) {
-                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-            } else
-                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-        }
     
         fileInput.addEventListener('change', function () {
             const file = fileInput.files[0];
@@ -42,6 +43,15 @@ const fileInput = document.getElementById('file-input');
             return false;
         }
 
+// Get a reference to the "submit" button
+var submitButton = document.getElementById("submit-button");
+    
+// Add a click event listener to the button
+submitButton.addEventListener("click", function() {
+    // Navigate to the "newprofile.html" page when the button is clicked
+    window.location.href = "NewProfile.html";
+});
+
 // this code is for logout btn pop up
 function confirmLogout() {
     if (window.confirm("Are you sure you want to log out?")) {
@@ -50,5 +60,22 @@ function confirmLogout() {
     }
 }
 
+// js for newprofile page
+
+// Retrieve query parameters from the URL
+const params = new URLSearchParams(window.location.search);
+        
+// Get the values and display them in the HTML
+document.getElementById('full-name').textContent = params.get('full-name'); 
+document.getElementById('dob').textContent = params.get('dob');
+document.getElementById('mobile').textContent = params.get('mobile');
+document.getElementById('email').textContent = params.get('email');
+
+
+//Set the src attribute of the profile picture
+const avatarSrc = params.get('avatar');
+if (avatarSrc) {
+    document.getElementById('profile-avatar').src = avatarSrc;
+}
 
        

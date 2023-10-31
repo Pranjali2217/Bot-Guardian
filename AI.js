@@ -3,7 +3,6 @@ const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
 const voiceButton = document.querySelector("#voice-btn");
-const deleteButton = document.querySelector("#delete-btn");
 const uploadButton = document.querySelector("#upload-btn");
 
 let userText = null;
@@ -17,8 +16,8 @@ const loadDataFromLocalstorage = () => {
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
     const defaultText = `<div class="default-text">
-                            <h1>Bot-Guardian</h1>
-                            <p>Elevating Your AI Experience - Unlocking the power of advanced chatbot technology with <br>improved features, secured image uploads, password storage, and voice-activated search, all safeguarded by our trusted AI guardian.</p>                           
+                            <h1>Ai Friend</h1>
+                            <p>AI Friend will store your chats securely</p>                           
                        </div>`
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
@@ -70,14 +69,6 @@ const getChatResponse = async (incomingChatDiv) => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 }
 
-const copyResponse = (copyBtn) => {
-    // Copy the text content of the response to the clipboard
-    const reponseTextElement = copyBtn.parentElement.querySelector("p");
-    navigator.clipboard.writeText(reponseTextElement.textContent);
-    copyBtn.textContent = "done";
-    setTimeout(() => copyBtn.textContent = "content_copy", 1000);
-}
-
 const showTypingAnimation = () => {
     // Display the typing animation and call the getChatResponse function
     const html = `<div class="chat-content">
@@ -121,20 +112,13 @@ const handleOutgoingChat = () => {
     setTimeout(showTypingAnimation, 500);
 }
 
-deleteButton.addEventListener("click", () => {
-    // Remove the chats from local storage and call loadDataFromLocalstorage function
-    if(confirm("Are you sure you want to delete all the chats?")) {
-        localStorage.removeItem("all-chats");
-        loadDataFromLocalstorage();
-    }
-});
-
 themeButton.addEventListener("click", () => {
     // Toggle body's class for the theme mode and save the updated theme to the local storage 
     document.body.classList.toggle("light-mode");
     localStorage.setItem("themeColor", themeButton.innerText);
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 });
+
 
 const initialInputHeight = chatInput.scrollHeight;
 
@@ -242,6 +226,16 @@ sidebarBtn.onclick = function () {
     } else
         sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
+
+// this code is for logout btn pop up
+function confirmLogout() {
+    if (window.confirm("Are you sure you want to log out?")) {
+        // Redirect to the login page
+        window.location.href = "index.html";
+    }
+}
+
+
 
 
 

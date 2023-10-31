@@ -4,30 +4,35 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AI FRIEND</title>
-    <link rel="stylesheet" href="home.css">
+    <title>Bot Guardian</title>
+    <link rel="stylesheet" href="AI.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
+
+
     <!-- Google Fonts Link For Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/e62ecdfa8a.js" crossorigin="anonymous"></script>
     <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> 
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable= yes"> -->
-    <script src="home.js" defer></script>
+    <script src="AI.js" defer></script>
 </head>
 
 <body>
 
     <div class="sidebar">
+
+
+
+
         <div class="card">
 
-            <img src="bot.png" alt="John"  style="width:50%">
-         
+            <img src="bot.png" alt="John" style="width:50%">
+
         </div>
-        
+
 
         <ul class="nav-links">
             <li>
@@ -46,13 +51,13 @@
 
             <li>
                 <a href="history.html">
-        
-                    <i class='bx bx-history' ></i>
+
+                    <i class='bx bx-history'></i>
                     <span class="links_name">History</span>
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="setting.html">
                     <i class='bx bx bx-cog'></i>
                     <span class="links_name">Settings</span>
@@ -60,10 +65,9 @@
             </li>
 
             <li class="log_out">
-                <a href="index.html">
-                  
+                <a href="javascript:void(0);" onclick="confirmLogout();">
                     <i class='bx bx-log-out'></i>
-                    <span class="links_name">Log out</span>
+                    <span id="logout-btn" class="links_name">Log out</span>
                 </a>
             </li>
         </ul>
@@ -75,25 +79,22 @@
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard">Bot gaurdian</span>
+                <span class="dashboard">AI Friend</span>
             </div>
-<!-- 
+
             <div class="profile-details">
                 <a href="AI.html">
-                <span class="admin_name"><img src="AI.jpg" alt=""></a> </span>
-            </div> -->
+                    <span id="AI-friend" class="admin_name"><img src="AI.jpg" alt="">
+                    </span>
+                </a>
+                
+            </div>
 
         </nav>
-<!-- 
-        <div class="centered-btn">
-            <button id="button1">Show</button>
-            <button id="button2">Speak</button>
-           
-        </div> -->
 
 
         <!-- Chats container -->
-        <div class="chat-container">
+        <div class="chat-container" id="chat-con">
 
         </div>
 
@@ -109,25 +110,36 @@
                     <input type="file" id="file-input" accept="image/*" style="display:none">
 
                     </span>
-                   
+
                 </div>
 
-                <div class="typing-textarea" >
-                    <textarea id="chat-input"  spellcheck="false" placeholder="Enter a prompt here" required ></textarea> 
+                <div class="typing-textarea">
+                    <textarea id="chat-input" spellcheck="false" placeholder="Enter a prompt here" required></textarea>
                     <span id="send-btn" class="material-symbols-rounded">send</span>
-                    
+
                 </div>
 
                 <div class="typing-controls">
-                
+
                     <span id="theme-btn" class="material-symbols-rounded">light_mode</span>
-                    <span id="voice-search-button" class="material-symbols-rounded"><i class='bx bxs-microphone'></i></span>
-                    <span id="delete-btn" class="material-symbols-rounded">delete</span>
+                    <span id="voice-search-button" class="material-symbols-rounded"><i
+                            class='bx bxs-microphone'></i></span>
                 </div>
             </div>
     </section>
 
 
 </body>
+<script src=
+"https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("chat-con").click(function () {
+                location.reload(true);
+                // alert('Reloading Page');
+            });
+        });
+    </script>
 
 </html>
