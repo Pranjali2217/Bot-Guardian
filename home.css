@@ -35,7 +35,8 @@
   padding-bottom: 150px;
   margin-right: 50px;
   margin-left: 20px;
-  height: 400px;
+  margin-top:100px;
+  height: 500px;
   border: 3px solid #ff710d;
 }
 
@@ -275,7 +276,7 @@ span.new_chat {
   color: white;
 }
 
-/* Reponsive Media Query */
+/* home section Reponsive Media Query */
 @media screen and (max-width: 600px) {
   .default-text h1 {
     font-size: 2.3rem;
@@ -744,13 +745,6 @@ nav .profile-details i {
 }
 
 @media (max-width: 700px) {
-
-  /* nav .sidebar-button .dashboard,
-  nav .profile-details .admin_name,
-  nav .profile-details i {
-    display: none;
-  } */
-
   .home-section nav .profile-details {
     height: 50px;
     min-width: 40px;
