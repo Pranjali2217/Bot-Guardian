@@ -244,5 +244,21 @@ sidebarBtn.onclick = function () {
 }
 
 
+// New chat button Script
+document.getElementById('newchat').addEventListener('click', function() {
+    // Clear chat messages (this depends on how your chat messages are stored)
+    clearChatMessages();
 
+    // Reload the page
+    location.reload();
+});
+
+function clearChatMessages() {
+    if(confirm("Are you sure you want new chats?")) {
+        localStorage.removeItem("all-chats");
+        loadDataFromLocalstorage();
+    }
+        
+   
+}
 
