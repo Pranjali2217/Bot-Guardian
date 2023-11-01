@@ -625,19 +625,21 @@ button {
 }
 
 nav .profile-details img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   object-fit: cover;
+
 }
 
-nav .profile-details .admin_name {
+
+/* nav .profile-details .admin_name {
   font-size: 20px;
   font-weight: 600;
   color: #333;
   margin: 0 10px;
   white-space: nowrap;
-}
+} */
 
 nav .profile-details i {
   font-size: 25px;
@@ -724,8 +726,16 @@ nav .profile-details i {
 
 @media (max-width: 700px) {
   .home-section nav .profile-details {
-    height: 50px;
+    height: 0px;
     min-width: 40px;
+  }
+
+  nav .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-bottom: 7px;
+
   }
 
   .home-content .sales-boxes .sales-details {
