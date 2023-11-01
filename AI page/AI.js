@@ -1,4 +1,4 @@
-const chatInput = document.querySelector("#chat-input");
+const chatInput = document.querySelector("#chat-inputAI");
 const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
@@ -20,7 +20,7 @@ const loadDataFromLocalstorage = () => {
                             <p>AI Friend will store your chats securely</p>                           
                        </div>`
 
-    chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
+    chatContainer.innerHTML = localStorage.getItem("chat-inputAI") || defaultText;
     chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
 }
 
@@ -65,7 +65,7 @@ const getChatResponse = async (incomingChatDiv) => {
     // Remove the typing animation, append the paragraph element and save the chats to local storage
     incomingChatDiv.querySelector(".typing-animation").remove();
     incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
-    localStorage.setItem("all-chats", chatContainer.innerHTML);
+    localStorage.setItem("chat-inputAI", chatContainer.innerHTML);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 }
 
@@ -232,6 +232,19 @@ function confirmLogout() {
     if (window.confirm("Are you sure you want to log out?")) {
         // Redirect to the login page
         window.location.href = "index.html";
+    }
+}
+
+// New chat button Script
+document.getElementById('newchatAI').addEventListener('click', function() {
+    // Clear chat messages (this depends on how your chat messages are stored)
+    clearChatMessagesAI();
+});
+
+function clearChatMessagesAI() {
+    if(confirm("Are you sure you want new chats?")) {
+        localStorage.removeItem("chat-inputAI");
+        loadDataFromLocalstorage();
     }
 }
 

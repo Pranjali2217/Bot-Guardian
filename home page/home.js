@@ -20,7 +20,7 @@ const loadDataFromLocalstorage = () => {
                             <p>Elevating Your AI Experience - Unlocking the power of advanced chatbot technology with <br>improved features, secured image uploads, password storage, and voice-activated search, all safeguarded by our trusted AI guardian.</p>                           
                        </div>`
 
-    chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
+    chatContainer.innerHTML = localStorage.getItem("chat-input") || defaultText;
     chatContainer.scrollTo(0, chatContainer.scrollHeight); // Scroll to bottom of the chat container
 }
 
@@ -65,7 +65,7 @@ const getChatResponse = async (incomingChatDiv) => {
     // Remove the typing animation, append the paragraph element and save the chats to local storage
     incomingChatDiv.querySelector(".typing-animation").remove();
     incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
-    localStorage.setItem("all-chats", chatContainer.innerHTML);
+    localStorage.setItem("chat-input", chatContainer.innerHTML);
     chatContainer.scrollTo(0, chatContainer.scrollHeight);
 }
 
@@ -242,18 +242,13 @@ function confirmLogout() {
 document.getElementById('newchat').addEventListener('click', function() {
     // Clear chat messages (this depends on how your chat messages are stored)
     clearChatMessages();
-
-    // Reload the page
-    // location.reload();
 });
 
 function clearChatMessages() {
     if(confirm("Are you sure you want new chats?")) {
-        localStorage.removeItem("all-chats");
+        localStorage.removeItem("chat-input");
         loadDataFromLocalstorage();
     }
-        
-   
 }
 
 
