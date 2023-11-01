@@ -33,7 +33,7 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border:1px solid  #ff710d;
+    border:1px solid #f7049a; ;
     overflow: hidden;
     margin: 0 auto;
     margin-top: 10px;
@@ -62,7 +62,12 @@ form{
     display:flex;
     align-items:center;
     padding: 25px;
-    border: 2px solid #ffb800;  
+    border: 2px solid #f7049a;  
+}
+
+.form-group ::placeholder {
+  color:black;
+      
 }
 
 .form-group input{
@@ -73,23 +78,24 @@ form{
     width: 100px;
     font-size: 18px;
     font-weight:600;
-    color:#444;
+    color:black;
 }
 
 .form-group i{
     flex:1;
     text-align:center;
-    color:#666;
+    color:black;
     font-size: 18px;
 }
 
 #file-input {
     display: none;
+    
 }
 
 .upload-button {
-    background: linear-gradient(315.01deg, #ffb800,#ff710d);
-    color:#070404;
+    background:linear-gradient(315.01deg, #f7049a, #7615aa);
+    color:white;
     font-size: 18px;
     border-radius: 50px;
     margin: 10px 0;
@@ -103,16 +109,17 @@ form{
 .profile h2{
     margin-top: 40px;
     margin-bottom: 10px ;
-    color: #ff710d;
+    color:#7615aa;
 }
 #user-info {
    
     margin-top: 20px;
+    color: #f7049a;
 }
 
 .btn{
-    background: linear-gradient(315.01deg, #ffb800,#ff710d);
-    color:#070404;
+    background:linear-gradient(315.01deg, #f7049a, #7615aa);
+    color:white;
     font-size: 18px;
     border-radius: 50px;
     margin: 10px 0;
@@ -155,7 +162,7 @@ form{
       height:100%;
       margin-top:60px;
       margin-bottom: 30px;
-      padding-left: 2%;
+      padding-left: 15%;
       padding-right: 15%;
   }
 
@@ -165,7 +172,7 @@ form{
 
     .upload-button {
       
-      font-size: 10px;
+      font-size: 15px;
       border-radius: 50px;
       margin: 10px 0;
       width: 100px;
@@ -175,7 +182,7 @@ form{
 
     .btn{
       
-      font-size: 10px;
+      font-size: 15px;
       border-radius: 50px;
       margin: 10px 0;
       width: 100px;
@@ -236,7 +243,7 @@ form{
   position: fixed;
   height: 100%;
   width: 200px;
-  background: linear-gradient(315.0deg, #b9870a, #ff710d);
+  background: linear-gradient(315.01deg, #f7049a, #7615aa);
   transition: all 0.5s ease;
 }
 
@@ -366,7 +373,7 @@ body {
   align-items: center;
   font-size: 24px;
   font-weight: 700;
-  color: #ff710d;
+  color: #7615aa;
   margin-left: 5px;
 }
 
@@ -385,9 +392,9 @@ nav .sidebar-button i {
 button {
   padding: 10px 20px;
   margin: 0 1px;
-  background: linear-gradient(315.01deg,#ffb800,#ff710d);
+  background: linear-gradient(315.01deg, #f7049a, #7615aa);
   border-radius: 20px;
-  color: black;
+  color: white;
   font-size: 18px;
   border: none;
  
