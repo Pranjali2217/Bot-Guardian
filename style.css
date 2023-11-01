@@ -30,9 +30,7 @@ body{
     left:-50%;
     width: 100%;
     height:100%;
-    /* background: linear-gradient(315.01deg, #ffb800,#ff710d); */
-    background: linear-gradient(315.01deg, #ee7724, #d8363a, #dd3675, #b44593);
-
+    background: linear-gradient(315.01deg, #f7049a, #7615aa);
     z-index:6;
     transform:translateX(100%);
     transition: 1s ease-in-out;
@@ -74,16 +72,16 @@ form.sign-up-form{
 
 .title{
     font-size: 35px;
-    color: #ffb800;
+    color: #7615aa;
     margin-bottom: 10px;
 }
 
 .input-field{
     width: 100%;
     height: 50px;
-    background: #f0f0f0;
+    background: white;
     margin: 10px 0;
-    border: 2px solid #ffb800;
+    border: 2px solid #f7049a;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -92,7 +90,7 @@ form.sign-up-form{
 .input-field i{
     flex:1;
     text-align:center;
-    color:#666;
+    color:black;
     font-size: 18px;
 }
 
@@ -104,11 +102,16 @@ form.sign-up-form{
     width: 100px;
     font-size: 18px;
     font-weight:600;
-    color:#444;
+    color:black;
+}
+
+.input-field ::placeholder{
+    color:black;
 }
 
 .btn{
-    background-color:#ffb800;
+    /* background-color:#7615aa; */
+    background: linear-gradient(315.01deg, #f7049a, #7615aa);
     color:#f0f0f0;
     font-size: 18px;
     border-radius: 50px;
@@ -119,18 +122,18 @@ form.sign-up-form{
     cursor:pointer;
 }
 
-.btn-hover{
-    background:#ff710d;
-}
-
 .forgot-pass-remember-me{
 	display: flex;
 	justify-content: center;
 	gap: 90px;
 }
 
+.forgot-pass-remember-me #ForgotPassword{
+    color:#7615aa;
+}
+
 .forgot-pass-remember-me #ForgotPassword:hover{
-	color: #008d7f;
+	color: #f7049a;
 }
 
 .social-text{
@@ -148,22 +151,21 @@ form.sign-up-form{
     width:45px;
     margin: 0 5px;
     border-radius: 50px;
-    border: 1px solid #444;
+    border: 2px solid #f7049a;
     display: flex;
     justify-content: center;
     align-items:center;
-    color:#ffb800;
-    border-color:#ff710d
+    color:#7615aa;
 }  
 
 a{
     text-decoration: none;
-    color:#ffb800;
+    color:#7615aa;
 }
 
 .social-icon:hover{ 
-    color:#ff710d;
-    border-color:#ff710d
+    color:#f7049a;
+    border-color:#f7049a;
 }
 
 .panels-container{
