@@ -333,7 +333,6 @@ form{
 .home-section nav {
   display: flex;
   justify-content: space-between;
-  height: 80px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -374,7 +373,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   color: #7615aa;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 
 nav .sidebar-button i {
