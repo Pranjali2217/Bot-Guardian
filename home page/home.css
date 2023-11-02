@@ -276,6 +276,7 @@ span.new_chat {
   visibility: hidden;
   width: 120px;
   background-color: rgb(50, 48, 48);
+  border:2px solid #f7049a;
   opacity: 0.8;
   color: #fff;
   text-align: center;
@@ -299,6 +300,7 @@ span.new_chat {
   width: 100px;
   height: 30px;
   background-color: rgb(53, 50, 50);
+  border:2px solid #f7049a;
   opacity: 0.8;
   color: #fff;
   text-align: center;
