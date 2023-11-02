@@ -60,22 +60,4 @@ function confirmLogout() {
     }
 }
 
-// js for newprofile page
 
-// Retrieve query parameters from the URL
-const params = new URLSearchParams(window.location.search);
-        
-// Get the values and display them in the HTML
-document.getElementById('full-name').textContent = params.get('full-name'); 
-document.getElementById('dob').textContent = params.get('dob');
-document.getElementById('mobile').textContent = params.get('mobile');
-document.getElementById('email').textContent = params.get('email');
-
-
-//Set the src attribute of the profile picture
-const avatarSrc = params.get('avatar');
-if (avatarSrc) {
-    document.getElementById('profile-avatar').src = avatarSrc;
-}
-
-       
