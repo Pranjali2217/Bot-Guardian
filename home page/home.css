@@ -270,13 +270,33 @@ span.new_chat {
 
 .tooltip {
   position: relative;
-  /* display: inline-block; */
+}
+
+.tooltip .tooltiptext1 {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(50, 48, 48);
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  font-size: 15px;
+  margin-top: 10px;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext1 {
+  visibility: visible;
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 100px;
   height: 30px;
   background-color: rgb(53, 50, 50);
   opacity: 0.8;
@@ -287,10 +307,9 @@ span.new_chat {
   left: 50%;
   margin-left: -60px; 
   margin-bottom: 10px;
- 
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
+  font-size: 15px;
 }
 
 
@@ -298,6 +317,8 @@ span.new_chat {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+
 
 
 /* home section Reponsive Media Query */

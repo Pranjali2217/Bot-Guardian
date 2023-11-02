@@ -12,7 +12,7 @@ sidebarBtn.onclick = function () {
 function confirmLogout() {
     if (window.confirm("Are you sure you want to log out?")) {
         // Redirect to the login page
-        window.location.href = "index.html";
+        window.location.href = "../login page/index.html";
     }
 }
 

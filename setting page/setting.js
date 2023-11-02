@@ -1,5 +1,3 @@
-// const fileInput = document.getElementById('file-input');
-//         const avatar = document.getElementById('avatar');
 
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
@@ -15,42 +13,7 @@
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
                 sidehide.style.display='block'
         }
-        // sidebarBtnhide.onclick = function (){
-        //     if(sidebarBtn){
-        //         sidehide.style.display='hidden'
-        //     }
-        //     else{
-        //         sidehide.style.display='block'
-        //     }
-        // }
-    
-        // fileInput.addEventListener('change', function () {
-        //     const file = fileInput.files[0];
-    
-        //     if (file) {
-        //         const reader = new FileReader();
-    
-        //         reader.onload = function (e) {
-        //             avatar.src = e.target.result;
-        //         };
-    
-        //         reader.readAsDataURL(file);
-        //     }
-        // });
-
-        
-        // JavaScript functions for theme change, account deletion, and password reset
-        // function changeTheme() {
-        //     const themeSelect = document.getElementById("themeSelect");
-        //     const selectedTheme = themeSelect.value;
-
-        //     if (selectedTheme === "dark") {
-        //         document.body.className = "dark-theme";
-        //     } else {
-        //         document.body.className = "light-theme";
-        //     }
-        // }
-
+       
         function deleteAccount() {
             const confirmDelete = confirm("Are you sure you want to delete your account? This action cannot be undone.");
             if (confirmDelete) {
@@ -68,7 +31,7 @@
         function confirmLogout() {
             if (window.confirm("Are you sure you want to log out?")) {
                 // Redirect to the login page
-                window.location.href = "index.html";
+                window.location.href = "../login page/index.html";
             }
         }
 

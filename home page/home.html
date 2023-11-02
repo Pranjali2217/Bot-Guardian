@@ -84,9 +84,12 @@
 
             <div class="profile-details" id="AI-friend">
                 <a href="../AI page/AI.html">
-                    <span  class="admin_name">
-                        <img src="../images/AI _LOGO.png" alt="">
-                    </span>
+                    <div class="tooltip">
+                        <span  class="admin_name">
+                            <img src="../images/AI _LOGO.png" alt="">
+                        </span>
+                        <span class="tooltiptext1">Store your details here</span>
+                    </div>
                 </a>
             </div>
 
@@ -107,12 +110,12 @@
                     <div class="tooltip">
                     <span id="newchat" class="new_chat" ><i class="fa-regular fa-message"></i></span>
                     
-                        <span class="tooltiptext">new chat</span>
+                        <span class="tooltiptext">New chat</span>
                     </div>
                    
                     <div class="tooltip">
                         <span id="upload-btn" class="material-symbols-rounded new_chat"><i class='bx bx-upload'></i></span> 
-                        <span class="tooltiptext">upload file</span>
+                        <span class="tooltiptext">Upload file</span>
                         <input type="file" id="file-input" accept="image/*" style="display:none">
                      </div>
                     </span>
@@ -126,10 +129,15 @@
                 </div>
 
                 <div class="typing-controls">
+                    <div class="tooltip">
+                        <span id="theme-btn" class="material-symbols-rounded new_chat">light_mode</span>
+                        <span class="tooltiptext">Change theme</span>
+                    </div>
 
-                    <span id="theme-btn" class="material-symbols-rounded new_chat">light_mode</span>
-                    <span id="voice-search-button" class="material-symbols-rounded new_chat"><i
-                            class='bx bxs-microphone'></i></span>
+                    <div class="tooltip">
+                        <span id="voice-search-button" class="material-symbols-rounded new_chat"><i class='bx bxs-microphone'></i></span>
+                        <span class="tooltiptext">Voice search</span>
+                    </div>
                 </div>
             </div>
     </section>
